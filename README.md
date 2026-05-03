@@ -4,6 +4,23 @@ This is a simple web application built using FastAPI that allows users to input 
 
 Data: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
+## Running the Web App
+
+1. Install dependencies:
+
+   ```bash
+   pip install fastapi uvicorn pandas scikit-learn joblib pydantic
+   ```
+
+2. Start the server from the [web/](web/) directory (model paths are relative):
+
+   ```bash
+   cd web
+   fastapi dev main.py
+   ```
+
+3. Open <http://127.0.0.1:8000> in your browser to use the form, or POST JSON to `/predict` to get predictions from all 8 models.
+
 ## Notebook Workflow
 
 The notebook at [notebook/practical-project.ipynb](notebook/practical-project.ipynb) covers:
