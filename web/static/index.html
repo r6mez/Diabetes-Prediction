@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diabetes Prediction</title>
+<link rel="stylesheet" href="/static/styles.css?v=2" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Diabetes Prediction</h1>
+      <p class="subtitle">Enter patient data to run all eight models.</p>
+    </header>
+
+    <div class="layout">
+      <form id="form">
+        <div class="grid">
+          <label>
+            <span>Pregnancies <em>1–24</em></span>
+            <input type="number" name="pregnancies" min="1" max="24" value="1" required />
+          </label>
+          <label>
+            <span>Glucose <em>1–599</em></span>
+            <input type="number" name="glucose" min="1" max="599" value="120" required />
+          </label>
+          <label>
+            <span>Blood pressure <em>1–199</em></span>
+            <input type="number" name="blood_pressure" min="1" max="199" value="70" required />
+          </label>
+          <label>
+            <span>Skin thickness <em>1–99</em></span>
+            <input type="number" name="skin_thickness" min="1" max="99" value="20" required />
+          </label>
+          <label>
+            <span>Insulin <em>1–999</em></span>
+            <input type="number" name="insulin" min="1" max="999" value="80" required />
+          </label>
+          <label>
+            <span>BMI <em>0.1–99.9</em></span>
+            <input type="number" name="bmi" step="0.1" min="0.1" max="99.9" value="25.0" required />
+          </label>
+          <label>
+            <span>Diabetes pedigree <em>0.001–9.999</em></span>
+            <input type="number" name="diabetes_pedigree_function" step="0.001" min="0.001" max="9.999" value="0.5" required />
+          </label>
+          <label>
+            <span>Age <em>1–149</em></span>
+            <input type="number" name="age" min="1" max="149" value="30" required />
+          </label>
+        </div>
+
+        <div class="presets">
+          <button type="button" class="preset" id="preset-healthy">Fill healthy example</button>
+          <button type="button" class="preset" id="preset-diabetic">Fill diabetic example</button>
+        </div>
+
+        <button type="submit" id="submit">Predict</button>
+        <p id="error" class="error" hidden></p>
+      </form>
+
+      <section id="results" class="results">
+        <h2>Results</h2>
+        <ul id="results-list">
+          <li class="placeholder">Submit the form to see predictions.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="/static/app.js?v=2"></script>
+</body>
+</html>
